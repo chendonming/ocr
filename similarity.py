@@ -129,17 +129,21 @@ img2 = cv2.imread('openpic/x2y6.png')
 hash1 = aHash(img1)
 hash2 = aHash(img2)
 n = cmpHash(hash1, hash2)
+# 均值哈希算法相似度：
 print('均值哈希算法相似度：', n)
 
 hash1 = dHash(img1)
 hash2 = dHash(img2)
 n = cmpHash(hash1, hash2)
+# 差值哈希算法相似度：
 print('差值哈希算法相似度：', n)
 
 hash1 = pHash(img1)
 hash2 = pHash(img2)
 n = cmpHash(hash1, hash2)
+# 感知哈希算法相似度：
 print('感知哈希算法相似度：', n)
 
+# 三直方图算法相似度：
 n = classify_hist_with_split(img1, img2)
 print('三直方图算法相似度：', n)
